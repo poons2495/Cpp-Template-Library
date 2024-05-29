@@ -18,6 +18,7 @@ int Stack::increase_stack_size() {
 
 	stack = new int[max_size + 1];
 
+	//Copy the values of temp stack to the main stack array
 	for (int i = 0; i < max_size; i++) {
 		stack[i] = temp[i];
 	}
@@ -30,6 +31,8 @@ int Stack::increase_stack_size() {
 }
 
 int Stack::push(int value) {
+	//Push a neew value into the stack
+	//If the array size is full, increase stack size by 1
 	if (top >= max_size - 1) {
 		increase_stack_size();
 	}
@@ -43,6 +46,7 @@ int Stack::push(int value) {
 }
 
 void Stack::display() {
+	//Display stack elements
 	cout << "Displaying stack elements : ";
 	for (int i = 0; i < max_size; i++) {
 		cout << stack[i] << " ";
@@ -51,6 +55,7 @@ void Stack::display() {
 }
 
 Stack::~Stack() {
+	//Destructor
 	top = max_size = -1;
 	delete[] stack;
 }
