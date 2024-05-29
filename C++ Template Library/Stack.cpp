@@ -31,7 +31,7 @@ int Stack::increase_stack_size() {
 }
 
 int Stack::push(int value) {
-	//Push a neew value into the stack
+	//Push a new value into the stack
 	//If the array size is full, increase stack size by 1
 	if (top >= max_size - 1) {
 		increase_stack_size();
@@ -42,6 +42,16 @@ int Stack::push(int value) {
 
 	cout << stack[top] << " is pushed to the stack" << endl;
 
+	return 1;
+}
+
+int Stack::pop() {
+	if (top < 0) {
+		cout << "Stack is empty!" << endl;
+		return 0;
+	}
+	cout << "Popped " << stack[top] << " from the stack" << endl;
+	top = top - 1;
 	return 1;
 }
 

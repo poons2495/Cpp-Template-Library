@@ -8,6 +8,7 @@ public:
 	Stack();
 	int push(int value);
 	void display();
+	int pop();
 	~Stack();
 
 private:

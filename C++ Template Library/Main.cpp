@@ -13,5 +13,8 @@ int main()
 	st.push(10);
 	st.push(20);
 	st.display();
-	return 0;
+	st.pop();
+	st.pop();
+	st.pop();
+	return 1;
 }
