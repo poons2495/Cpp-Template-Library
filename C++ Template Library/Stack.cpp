@@ -46,6 +46,8 @@ int Stack::push(int value) {
 }
 
 int Stack::pop() {
+	//Pop the top value from the stack
+	//Check if the stack is empty
 	if (top < 0) {
 		cout << "Stack is empty!" << endl;
 		return 0;
@@ -56,9 +58,9 @@ int Stack::pop() {
 }
 
 void Stack::display() {
-	//Display stack elements
+	//Display stack elements from the top element
 	cout << "Displaying stack elements : ";
-	for (int i = 0; i < max_size; i++) {
+	for (int i = top; i >= 0; i--) {
 		cout << stack[i] << " ";
 	}
 	cout << endl;
